@@ -13,7 +13,7 @@ public class Kotik {
         private Scanner scanner=new Scanner(System.in);
         static int classObjects=0;
 
-    public  int catCount(){
+    public static int catCount(){
         classObjects++;
         System.out.println("Создано:"+ classObjects+ " котика.");
         return classObjects;
@@ -200,10 +200,12 @@ public class Kotik {
         this.weight = weight;
         this.prettiness = prettiness;
         this.meow = meow;}
-
-    }
+public Kotik(){
 
 }
+    }
+
+
 
 
 

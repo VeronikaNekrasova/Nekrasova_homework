@@ -22,7 +22,7 @@ public class Application {
      System.out.println("Он весит: "+ tom.getWeight());
      tom.liveAnotherDay();
      
-     Kotik.catCount();
+     int i=Kotik.catCount();
     }
 
 
