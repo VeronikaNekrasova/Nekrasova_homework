@@ -13,37 +13,44 @@ public class Kotik {
         private Scanner scanner=new Scanner(System.in);
         static int classObjects=0;
 
-    public static int catCount(){
+    public  int catCount(){
         classObjects++;
         System.out.println("Создано:"+ classObjects+ " котика.");
         return classObjects;
     }
 
     public void setFood(String food){
+
         this.food=food;
     }
 
     public String getFood(){
+
         return food;
     }
 
     public void setSatiety(int satiety){
+
         this.satiety=satiety;
     }
 
     public int getSatiety(){
+
         return satiety;
     }
 
     public void setPrettiness(int prettiness){
+
         this.prettiness=prettiness;
     }
 
     public int getPrettiness(){
+
         return prettiness;
     }
 
     public void setWeight(int weight){
+
         this.weight=weight;
     }
 
