@@ -21,6 +21,7 @@ public class Application {
      System.out.println("Имя кота:" + tom.getName());
      System.out.println("Он весит: "+ tom.getWeight());
      tom.liveAnotherDay();
+     
      Kotik.catCount();
     }
 
