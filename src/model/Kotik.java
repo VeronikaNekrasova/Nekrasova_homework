@@ -1,4 +1,4 @@
-package homework_1;
+package model;
 
 import java.util.Scanner;
 
@@ -10,8 +10,18 @@ public class Kotik {
         private int satiety;
         private String food;
         private boolean catHungry=true;
-        private Scanner scanner=new Scanner(System.in);
-        static int classObjects=0;
+        private final Scanner scanner=new Scanner(System.in);
+        static int classObjects= 0;
+
+    public Kotik(String name, int weight, int prettiness, String meow){
+        this.name = name;
+        this.weight = weight;
+        this.prettiness = prettiness;
+        this.meow = meow;}
+
+    public Kotik(){
+        classObjects++;
+    }
 
     public static int catCount(){
         classObjects++;
@@ -99,7 +109,11 @@ public class Kotik {
         satiety = value;
         if (eat(getSatiety()) <= 0) {
             System.out.println("Котик голоден, его надо покормить");
-            System.out.println("Чем будем кормить котика:" + "\n" + "1.дать корм" + "\n" + "2.дать молока" + "\n" + "3.дать вискас");
+            System.out.println("""
+                    Чем будем кормить котика:
+                    1.дать корм
+                    2.дать молока
+                    3.дать вискас""");
             food = scanner.nextLine();
             switch (food) {
                 case "1.дать корм":
@@ -111,7 +125,7 @@ public class Kotik {
                     System.out.println("Такой еды нет дома.");
                                }
         }else{
-            System.out.println("Котик сын и его не надо кормить.");
+            System.out.println("Котик сыт, его не надо кормить.");
         }
         return food;
     }
@@ -175,7 +189,7 @@ public class Kotik {
 
     public void liveAnotherDay() {
         eat();
-        for (int i = 0; i < 24; i++) {
+        for (int i = 1; i <= 24; i++) {
             int catToDoToday = (int) (Math.random() * 5 + 1);
             switch (catToDoToday) {
                 case 1:
@@ -195,14 +209,8 @@ public class Kotik {
             }
         }
     }
-    public Kotik(String name, int weight, int prettiness, String meow){
-        this.name = name;
-        this.weight = weight;
-        this.prettiness = prettiness;
-        this.meow = meow;}
-public Kotik(){
 
-}
+
     }
 
 
